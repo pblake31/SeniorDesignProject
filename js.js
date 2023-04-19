@@ -1,6 +1,6 @@
 function publishNumber() {
   //Create a new Client object with your broker's hostname, port and your own clientId
-  var client = new Paho.MQTT.Client('broker.mqttdashboard.com', 8000, 'clientId');
+  var client = new Paho.MQTT.Client('broker_name', 8000, 'clientId');
 
   var options = {
   //connection attempt timeout in seconds
@@ -10,8 +10,8 @@ function publishNumber() {
       //select component dropdown (Topic)
       var dropdown = document.getElementById("dropdown").value;
       
-      //add component to SMD topics
-      var topic = 'SmartSMD/Feeder/' + dropdown;
+      //add value from dropdown menu to end of publish topic
+      var topic = 'Publish/Topic' + dropdown;
       
       //select quantity (Message)
       var quantity = document.getElementById("quantity-input").value; 
