@@ -1,3 +1,5 @@
+//this function takes the user input from the dropdown menu and publishes it to an MQTT broker
+//In this example, the quantity of a certain component is published
 function publishNumber() {
   //Create a new Client object with your broker's hostname, port and your own clientId
   var client = new Paho.MQTT.Client('broker_name', 8000, 'clientId');
